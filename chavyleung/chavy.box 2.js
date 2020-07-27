@@ -1,11 +1,7 @@
 const $ = new Env('BoxJs')
 $.domain = '8.8.8.8'
 
-<<<<<<< HEAD
-$.version = '0.4.23'
-=======
 $.version = '0.6.5'
->>>>>>> master
 $.versionType = 'beta'
 $.KEY_sessions = 'chavy_boxjs_sessions'
 $.KEY_versions = 'chavy_boxjs_versions'
@@ -40,24 +36,17 @@ $.html = $.name
   else if (/^\/my/.test(path)) {
     await handleMy()
   }
-<<<<<<< HEAD
-=======
   // 处理 revert 请求 => /revert
   else if (/^\/revert/.test(path)) {
     await handleRevert()
   }
->>>>>>> master
 })()
   .catch((e) => {
     $.logErr(e)
   })
   .finally(() => {
     if ($.isapi) {
-<<<<<<< HEAD
-      $done({ body: $.JSON })
-=======
       $done({ body: $.json })
->>>>>>> master
     } else {
       $.done({ status: 200, body: $.html })
     }
@@ -83,107 +72,24 @@ function getSystemCfgs() {
       { id: 'QuanX', icons: ['https://raw.githubusercontent.com/Orz-3/mini/none/quanX.png', 'https://raw.githubusercontent.com/Orz-3/task/master/quantumultx.png'] },
       { id: 'Loon', icons: ['https://raw.githubusercontent.com/Orz-3/mini/none/loon.png', 'https://raw.githubusercontent.com/Orz-3/task/master/loon.png'] }
     ],
-<<<<<<< HEAD
-    chavy: {
-      id: 'Chavy Scripts',
-      icon: 'https://avatars3.githubusercontent.com/u/29748519',
-      repo: 'https://github.com/chavyleung/scripts'
-    },
-    senku: {
-      id: 'GideonSenku',
-      icon: 'https://avatars1.githubusercontent.com/u/39037656',
-      repo: 'https://github.com/GideonSenku'
-    },
-    orz3: {
-      id: 'Orz-3',
-      icon: 'https://raw.githubusercontent.com/Orz-3/task/master/Orz-3.png',
-      repo: 'https://github.com/Orz-3/'
-    },
-    contributors: [
-      { id: 'danchaw', icon: 'https://avatars1.githubusercontent.com/u/33873206?s=60&v=4', repo: 'https://github.com/danchaw' },
-      { id: '0x959', icon: 'https://avatars3.githubusercontent.com/u/42092849?s=60&v=4', repo: 'https://github.com/0x959' },
-      { id: 'lcandy2', icon: 'https://avatars1.githubusercontent.com/u/45784494?s=60&v=4', repo: 'https://github.com/lcandy2' },
-      { id: 'lowking', icon: 'https://avatars0.githubusercontent.com/u/33308659?s=60&v=4', repo: 'https://github.com/lowking' },
-      { id: 'chouchoui', icon: 'https://avatars1.githubusercontent.com/u/14866249?s=60&v=4', repo: 'https://github.com/chouchoui' },
-      { id: 'evilbutcher', icon: 'https://avatars1.githubusercontent.com/u/62224738?s=60&v=4', repo: 'https://github.com/evilbutcher' },
-      { id: 'eegod', icon: 'https://avatars0.githubusercontent.com/u/9635792?s=60&v=4', repo: 'https://github.com/eegod' },
-      { id: 'KaytZ', icon: 'https://avatars2.githubusercontent.com/u/17397324?s=60&v=4', repo: 'https://github.com/KaytZ' }
-    ],
-    boxjs: {
-      id: 'BoxJs',
-      show: false,
-      icon: 'https://raw.githubusercontent.com/Orz-3/task/master/box.png',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/box.png', 'https://raw.githubusercontent.com/Orz-3/task/master/box.png'],
-      repo: 'https://github.com/chavyleung/scripts'
-    }
-=======
     chavy: { id: 'Chavy Scripts', icon: 'https://avatars3.githubusercontent.com/u/29748519', repo: 'https://github.com/chavyleung/scripts' },
     senku: { id: 'GideonSenku', icon: 'https://avatars1.githubusercontent.com/u/39037656', repo: 'https://github.com/GideonSenku' },
     orz3: { id: 'Orz-3', icon: 'https://raw.githubusercontent.com/Orz-3/task/master/Orz-3.png', repo: 'https://github.com/Orz-3/' },
     boxjs: { id: 'BoxJs', show: false, icon: 'https://raw.githubusercontent.com/Orz-3/task/master/box.png', icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/box.png', 'https://raw.githubusercontent.com/Orz-3/task/master/box.png'], repo: 'https://github.com/chavyleung/scripts' },
     contributors: []
->>>>>>> master
   }
 }
 
 function getSystemApps() {
   const sysapps = [
     {
-<<<<<<< HEAD
-      id: '10010',
-      name: '中国联通',
-      keys: ['chavy_tokenurl_10010', 'chavy_tokenheader_10010', 'chavy_signurl_10010', 'chavy_signheader_10010', 'chavy_loginlotteryurl_10010', 'chavy_loginlotteryheader_10010', 'chavy_findlotteryurl_10010', 'chavy_findlotteryheader_10010'],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/10010',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/10010.png', 'https://raw.githubusercontent.com/Orz-3/task/master/10010.png']
-    },
-    {
-=======
->>>>>>> master
       id: '52poje',
       name: '吾爱破解',
       keys: ['CookieWA'],
       author: '@NobyDa',
       repo: 'https://github.com/NobyDa/Script/blob/master/52pojie-DailyBonus/52pojie.js',
-<<<<<<< HEAD
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/52pj.png', 'https://raw.githubusercontent.com/Orz-3/task/master/52pj.png']
-    },
-    {
-      id: 'AcFun',
-      name: 'AcFun',
-      keys: ['chavy_cookie_acfun', 'chavy_token_acfun'],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/acfun',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/acfun.png', 'https://raw.githubusercontent.com/Orz-3/task/master/acfun.png']
-    },
-    {
-      id: 'ApkTw',
-      name: 'ApkTw',
-      keys: ['chavy_cookie_apktw'],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/apktw',
-      url: 'https://apk.tw/',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/apktw.png', 'https://raw.githubusercontent.com/Orz-3/task/master/apktw.png'],
-      tasks: [{ cron: '3 0 * * *', script: 'apktw.js' }],
-      rewrites: [{ type: 'request', pattern: '^https://apk.tw/member.php(.*?)action=login', script: 'apktw.cookie.js', body: true }]
-    },
-    {
-      id: 'BAIDU',
-      name: '百度签到',
-      keys: ['chavy_cookie_tieba'],
-      settings: [
-        { id: 'CFG_tieba_isOrderBars', name: '按连签排序', val: false, type: 'boolean', desc: '默认按经验排序' },
-        { id: 'CFG_tieba_maxShowBars', name: '每页显示数', val: 15, type: 'number', desc: '每页最显示多少个吧信息' },
-        { id: 'CFG_tieba_maxSignBars', name: '每次并发', val: 5, type: 'number', desc: '每次并发签到多少个吧' },
-        { id: 'CFG_tieba_signWaitTime', name: '并发间隔 (毫秒)', val: 2000, type: 'number', desc: '每次并发间隔时间' }
-      ],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/tieba',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/baidu.png', 'https://raw.githubusercontent.com/Orz-3/task/master/baidu.png']
-=======
       icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/52pj.png', 'https://raw.githubusercontent.com/Orz-3/task/master/52pj.png'],
       script: 'https://github.com/NobyDa/Script/blob/master/52pojie-DailyBonus/52pojie.js'
->>>>>>> master
     },
     {
       id: 'iQIYI',
@@ -191,75 +97,8 @@ function getSystemApps() {
       keys: ['CookieQY'],
       author: '@NobyDa',
       repo: 'https://github.com/NobyDa/Script/blob/master/iQIYI-DailyBonus/iQIYI.js',
-<<<<<<< HEAD
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/iQIYI.png', 'https://raw.githubusercontent.com/Orz-3/task/master/iQIYI.png']
-    },
-    {
-      id: 'JD618',
-      name: '京东618',
-      keys: ['chavy_url_jd816', 'chavy_body_jd816', 'chavy_headers_jd816'],
-      settings: [
-        { id: 'CFG_618_radomms_min', name: '最小随机等待 (毫秒)', val: 2000, type: 'text', desc: '在任务默认的等待时间基础上，再增加的随机等待时间！' },
-        { id: 'CFG_618_radomms_max', name: '最大随机等待 (毫秒)', val: 5000, type: 'text', desc: '在任务默认的等待时间基础上，再增加的随机等待时间！' },
-        { id: 'CFG_618_isSignShop', name: '商店签到', val: true, type: 'boolean', desc: '71 家商店, 如果每天都签不上, 可以关掉了! 默认: true' },
-        { id: 'CFG_618_isJoinBrand', name: '品牌会员', val: false, type: 'boolean', desc: '25 个品牌, 会自动加入品牌会员! 默认: true' },
-        { id: 'CFG_BOOM_times_JD618', name: '炸弹次数', val: 1, type: 'text', desc: '总共发送多少次炸弹! 默认: 1' },
-        { id: 'CFG_BOOM_interval_JD618', name: '炸弹间隔 (毫秒)', val: 100, type: 'text', desc: '每次间隔多少毫秒! 默认: 100' }
-      ],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/jd',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/jd.png', 'https://raw.githubusercontent.com/Orz-3/task/master/jd.png']
-    },
-    {
-      id: 'videoqq',
-      name: '腾讯视频',
-      keys: ['chavy_cookie_videoqq', 'chavy_auth_url_videoqq', 'chavy_auth_header_videoqq', 'chavy_msign_url_videoqq', 'chavy_msign_header_videoqq'],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/videoqq',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/videoqq.png', 'https://raw.githubusercontent.com/Orz-3/task/master/videoqq.png']
-    },
-    {
-      id: 'V2EX',
-      name: 'V2EX',
-      keys: ['chavy_cookie_v2ex'],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/v2ex',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/v2ex.png', 'https://raw.githubusercontent.com/Orz-3/task/master/v2ex.png']
-    },
-    {
-      id: 'NeteaseMusic',
-      name: '网易云音乐',
-      keys: ['chavy_cookie_neteasemusic'],
-      settings: [
-        { id: 'CFG_neteasemusic_retryCnt', name: '重试次数', val: 10, type: 'text', desc: '一直尝试签到直至出现“重复签到”标识!' },
-        { id: 'CFG_neteasemusic_retryInterval', name: '重试间隔 (毫秒)', val: 500, type: 'text', desc: '每次重试间隔时间 (毫秒)！' }
-      ],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/neteasemusic',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/Netease.png', 'https://raw.githubusercontent.com/Orz-3/task/master/Netease.png']
-    },
-    {
-      id: 'WPS',
-      name: 'WPS',
-      keys: ['chavy_signhomeurl_wps', 'chavy_signhomeheader_wps'],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/wps',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/wps.png', 'https://raw.githubusercontent.com/Orz-3/task/master/wps.png']
-    },
-    {
-      id: 'NoteYoudao',
-      name: '有道云笔记',
-      keys: ['chavy_signurl_noteyoudao', 'chavy_signbody_noteyoudao', 'chavy_signheaders_noteyoudao'],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/tree/master/noteyoudao',
-      url: 'https://apps.apple.com/cn/app/有道云笔记-扫描王版/id450748070',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/noteyoudao.png', 'https://raw.githubusercontent.com/Orz-3/task/master/noteyoudao.png'],
-      tasks: [{ cron: '3 0 * * *', script: 'noteyoudao.js' }],
-      rewrites: [{ type: 'request', pattern: '^https://note.youdao.com/yws/mapi/user?method=checkin', script: 'noteyoudao.cookie.js', body: true }]
-=======
       icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/iQIYI.png', 'https://raw.githubusercontent.com/Orz-3/task/master/iQIYI.png'],
       script: 'https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js'
->>>>>>> master
     },
     {
       id: 'txnews',
@@ -267,12 +106,8 @@ function getSystemApps() {
       keys: ['sy_signurl_txnews', 'sy_cookie_txnews', 'sy_signurl_txnews2', 'sy_cookie_txnews2'],
       author: '@Sunert',
       repo: 'https://github.com/Sunert/Scripts/blob/master/Task/txnews.js',
-<<<<<<< HEAD
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png', 'https://raw.githubusercontent.com/Orz-3/task/master/txnews.png']
-=======
       icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png', 'https://raw.githubusercontent.com/Orz-3/task/master/txnews.png'],
       script: 'https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js'
->>>>>>> master
     },
     {
       id: 'BoxSwitcher',
@@ -281,20 +116,8 @@ function getSystemApps() {
       settings: [{ id: 'CFG_BoxSwitcher_isSilent', name: '静默运行', val: false, type: 'boolean', desc: '切换会话时不发出系统通知!' }],
       author: '@chavyleung',
       repo: 'https://github.com/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
-<<<<<<< HEAD
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/box.png', 'https://raw.githubusercontent.com/Orz-3/task/master/box.png']
-    },
-    {
-      id: 'sfexpress',
-      name: '顺丰速运',
-      keys: ['chavy_loginurl_sfexpress', 'chavy_loginheader_sfexpress'],
-      author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/blob/master/sfexpress',
-      icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/sfexpress.png', 'https://raw.githubusercontent.com/Orz-3/task/master/sfexpress.png']
-=======
       icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/box.png', 'https://raw.githubusercontent.com/Orz-3/task/master/box.png'],
       script: 'https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js'
->>>>>>> master
     }
   ]
   sysapps.sort((a, b) => a.id.localeCompare(b.id))
@@ -303,11 +126,7 @@ function getSystemApps() {
 }
 
 function getUserCfgs() {
-<<<<<<< HEAD
-  const defcfgs = { favapps: [], appsubs: [], appsubCaches: {}, refreshsecs: 3 }
-=======
   const defcfgs = { favapps: [], appsubs: [], appsubCaches: {}, httpapi: 'examplekey@127.0.0.1:6166' }
->>>>>>> master
   const userCfgsStr = $.getdata($.KEY_userCfgs)
   return userCfgsStr ? Object.assign(defcfgs, JSON.parse(userCfgsStr)) : defcfgs
 }
@@ -344,15 +163,6 @@ function refreshAppSub(sub, usercfgs) {
   })
 }
 
-<<<<<<< HEAD
-async function refreshAppSubs() {
-  $.msg($.name, '更新订阅: 开始!')
-  const usercfgs = getUserCfgs()
-  const refreshActs = []
-  for (let subIdx = 0; subIdx < usercfgs.appsubs.length; subIdx++) {
-    const sub = usercfgs.appsubs[subIdx]
-    refreshActs.push(refreshAppSub(sub, usercfgs))
-=======
 async function refreshAppSubs(subId) {
   $.msg($.name, '更新订阅: 开始!')
   const usercfgs = getUserCfgs()
@@ -365,7 +175,6 @@ async function refreshAppSubs(subId) {
       const sub = usercfgs.appsubs[subIdx]
       refreshActs.push(refreshAppSub(sub, usercfgs))
     }
->>>>>>> master
   }
   await Promise.all(refreshActs)
   $.setdata(JSON.stringify(usercfgs), $.KEY_userCfgs)
@@ -445,20 +254,9 @@ function getSessions() {
 
 async function getVersions() {
   let vers = []
-<<<<<<< HEAD
-  // 如果启用了修复功能, 则直接返回, 不发送检查版本请求
-  // const usercfgs = getUserCfgs()
-  // if (['true', true].includes(usercfgs.isFixVPN)) {
-  //   return vers
-  // }
-  await new Promise((resolve) => {
-    setTimeout(resolve, 1000)
-    const verurl = 'https://raw.githubusercontent.com/chavyleung/scripts/master/box/release/box.release.json'
-=======
   await new Promise((resolve) => {
     setTimeout(resolve, 1000)
     const verurl = `https://gitee.com/chavyleung/scripts/raw/master/box/release/box.release.json`
->>>>>>> master
     $.get({ url: verurl }, (err, resp, data) => {
       try {
         const _data = JSON.parse(data)
@@ -473,23 +271,6 @@ async function getVersions() {
   return vers
 }
 
-<<<<<<< HEAD
-function getSystemThemes() {
-  return [
-    { id: '', name: '默认' },
-    { id: 'red', name: '红色' },
-    { id: 'pink', name: '粉红' },
-    { id: 'purple', name: '紫色' },
-    { id: 'blue', name: '蓝色' },
-    { id: 'light-blue', name: '浅蓝' },
-    { id: 'brown', name: '棕色' },
-    { id: 'grey', name: '灰色' },
-    { id: 'blue-grey', name: '蓝灰' }
-  ]
-}
-
-=======
->>>>>>> master
 async function handleApi() {
   const data = JSON.parse($request.body)
   // 保存会话
@@ -661,9 +442,6 @@ async function handleApi() {
   }
   // 刷新应用订阅
   else if (data.cmd === 'refreshAppSubs') {
-<<<<<<< HEAD
-    await refreshAppSubs()
-=======
     await refreshAppSubs(data && data.val)
   }
   // 抹掉订阅缓存
@@ -703,7 +481,6 @@ async function handleApi() {
         eval(script)
       })
     }
->>>>>>> master
   }
 }
 
@@ -716,12 +493,7 @@ async function getBoxData() {
     appsubs: getAppSubs(),
     syscfgs: getSystemCfgs(),
     usercfgs: getUserCfgs(),
-<<<<<<< HEAD
-    globalbaks: getGlobalBaks(),
-    colors: getSystemThemes()
-=======
     globalbaks: getGlobalBaks()
->>>>>>> master
   }
   const apps = []
   apps.push(...box.sysapps)
@@ -749,12 +521,9 @@ async function handleApp(appId) {
   }
   box.appsubs.filter((sub) => sub.enable !== false).forEach((sub) => apps.push(...sub.apps))
   const curapp = apps.find((app) => app.id === appId)
-<<<<<<< HEAD
-=======
   if (curapp.script && $.isSurge()) {
     await $.getScript(curapp.script).then((script) => (curapp.script_text = script))
   }
->>>>>>> master
   $.html = printHtml(JSON.stringify(box), JSON.stringify(curapp), 'appsession')
   if (box.usercfgs.isDebugFormat) {
     console.log(printHtml(`'\${data}'`, `'\${curapp}'`, `\${curview}`))
@@ -783,8 +552,6 @@ async function handleMy() {
   }
 }
 
-<<<<<<< HEAD
-=======
 async function handleRevert() {
   $.html = printRevertHtml()
 }
@@ -940,7 +707,6 @@ function printRevertHtml() {
   `
 }
 
->>>>>>> master
 function printHtml(data, curapp = null, curview = 'app') {
   return `
   <!DOCTYPE html>
@@ -949,10 +715,7 @@ function printHtml(data, curapp = null, curview = 'app') {
       <title>BoxJs</title>
       <meta charset="utf-8" />
       <meta name="apple-mobile-web-app-capable" content="yes">
-<<<<<<< HEAD
-=======
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
->>>>>>> master
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
       <link rel="Bookmark" href="https://raw.githubusercontent.com/chavyleung/scripts/master/BOXJS.png" />
       <link rel="shortcut icon" href="https://raw.githubusercontent.com/chavyleung/scripts/master/BOXJS.png" />
@@ -964,8 +727,6 @@ function printHtml(data, curapp = null, curview = 'app') {
         [v-cloak]{
           display: none
         }
-<<<<<<< HEAD
-=======
         body{
           padding-top: constant(safe-area-inset-top) !important;
           padding-top: env(safe-area-inset-top);
@@ -978,7 +739,6 @@ function printHtml(data, curapp = null, curview = 'app') {
         .v-app-bar .v-autocomplete{
           box-sizing: border-box;
         }
->>>>>>> master
         .v-bottom-navigation,
         .v-bottom-sheet {
           padding-bottom: constant(safe-area-inset-bottom);
@@ -1016,11 +776,7 @@ function printHtml(data, curapp = null, curview = 'app') {
     <body>
       <div id="app">
         <v-app v-scroll="onScroll" v-cloak>
-<<<<<<< HEAD
-          <v-app-bar :color="ui.appbar.color" app dense>
-=======
           <v-app-bar app dense :color="darkMode || !window.navigator.standalone ? undefined : '#F7BB0E'">
->>>>>>> master
             <v-menu bottom left v-if="['app', 'home', 'log', 'sub'].includes(ui.curview) && box.syscfgs.env !== ''">
               <template v-slot:activator="{ on }">
                 <v-btn icon v-on="on">
@@ -1051,11 +807,7 @@ function printHtml(data, curapp = null, curview = 'app') {
                   </v-list-item-content>
                   <v-list-item-action>
                     <v-btn icon v-if="item.isFav" @click.stop="onFav(item)">
-<<<<<<< HEAD
-                      <v-icon v-if="box.usercfgs.isTransparentIcons" color="white">mdi-star</v-icon>
-=======
                       <v-icon v-if="darkMode && box.usercfgs.isTransparentIcons" color="white">mdi-star</v-icon>
->>>>>>> master
                       <v-icon v-else color="yellow darken-2">mdi-star</v-icon>
                     </v-btn>
                     <v-btn icon v-else @click.stop="onFav(item)"><v-icon color="grey">mdi-star-outline</v-icon></v-btn>
@@ -1123,8 +875,6 @@ function printHtml(data, curapp = null, curview = 'app') {
                 </v-row>
               </v-list-item>
               <v-divider></v-divider>
-<<<<<<< HEAD
-=======
               <v-list-item v-if="box.syscfgs.env === 'Surge'">
                 <v-list-item-content>
                   <v-text-field 
@@ -1138,7 +888,6 @@ function printHtml(data, curapp = null, curview = 'app') {
                   </v-text-field>
                 </v-list-item-content>
               </v-list-item>
->>>>>>> master
               <v-list-item>
                 <v-list-item-content>
                   <v-select 
@@ -1254,11 +1003,7 @@ function printHtml(data, curapp = null, curview = 'app') {
                         </v-list-item-content>
                         <v-list-item-action>
                           <v-btn icon v-if="app.isFav" @click.stop="onFav(app, appIdx)">
-<<<<<<< HEAD
-                            <v-icon v-if="box.usercfgs.isTransparentIcons" color="white">mdi-star</v-icon>
-=======
                             <v-icon v-if="darkMode && box.usercfgs.isTransparentIcons" color="white">mdi-star</v-icon>
->>>>>>> master
                             <v-icon v-else color="yellow darken-2">mdi-star</v-icon>
                           </v-btn>
                           <v-btn icon v-else @click.stop="onFav(app, appIdx)"><v-icon color="grey">mdi-star-outline</v-icon></v-btn>
@@ -1284,11 +1029,7 @@ function printHtml(data, curapp = null, curview = 'app') {
                       </v-list-item-content>
                       <v-list-item-action>
                         <v-btn icon v-if="app.isFav" @click.stop="onFav(app, appIdx)">
-<<<<<<< HEAD
-                          <v-icon v-if="box.usercfgs.isTransparentIcons" color="white">mdi-star</v-icon>
-=======
                           <v-icon v-if="darkMode && box.usercfgs.isTransparentIcons" color="white">mdi-star</v-icon>
->>>>>>> master
                           <v-icon v-else color="yellow darken-2">mdi-star</v-icon>
                         </v-btn>
                         <v-btn icon v-else @click.stop="onFav(app, appIdx)"><v-icon color="grey">mdi-star-outline</v-icon></v-btn>
@@ -1298,20 +1039,13 @@ function printHtml(data, curapp = null, curview = 'app') {
                 </v-expansion-panel>
               </v-expansion-panels>
             </v-container>
-<<<<<<< HEAD
-            <v-container fluid v-if="ui.curview === 'appsession'">
-=======
             <v-container fluid v-else-if="ui.curview === 'appsession'">
->>>>>>> master
               <v-card class="mx-auto mb-4">
                 <template v-if="Array.isArray(ui.curapp.settings)">
                   <v-subheader v-if="Array.isArray(ui.curapp.settings)">
                     应用设置 ({{ ui.curapp.settings.length }})
-<<<<<<< HEAD
-=======
                     <v-spacer></v-spacer>
                     <v-btn v-if="ui.curapp.script" icon @click="onRunScript"><v-icon color="green">mdi-play-circle</v-icon></v-btn>
->>>>>>> master
                   </v-subheader>
                   <v-form class="pl-4 pr-4">
                     <template v-for="(setting, settingIdx) in ui.curapp.settings">
@@ -1340,10 +1074,7 @@ function printHtml(data, curapp = null, curview = 'app') {
                 <v-subheader>
                   当前会话 ({{ ui.curapp.datas.length }})
                   <v-spacer></v-spacer>
-<<<<<<< HEAD
-=======
                   <v-btn v-if="ui.curapp.script" icon @click="onRunScript"><v-icon color="green">mdi-play-circle</v-icon></v-btn>
->>>>>>> master
                   <v-menu bottom left>
                     <template v-slot:activator="{ on }">
                       <v-btn icon v-on="on"><v-icon>mdi-dots-vertical</v-icon></v-btn>
@@ -1457,11 +1188,7 @@ function printHtml(data, curapp = null, curview = 'app') {
                 </v-card>
               </v-dialog>
             </v-container>
-<<<<<<< HEAD
-            <v-container fluid v-if="ui.curview === 'sub'">
-=======
             <v-container fluid v-else-if="ui.curview === 'sub'">
->>>>>>> master
               <v-card class="mx-auto" v-if="appsubs.length > 0">
                 <v-list nav dense>
                   <v-subheader inset>
@@ -1493,18 +1220,13 @@ function printHtml(data, curapp = null, curview = 'app') {
                           <v-btn icon v-on="on"><v-icon>mdi-dots-vertical</v-icon></v-btn>
                         </template>
                         <v-list dense>
-<<<<<<< HEAD
-=======
                           <v-list-item @click="onRefreshAppSub(sub)">
                             <v-list-item-title>更新</v-list-item-title>
                           </v-list-item>
->>>>>>> master
                           <v-list-item v-clipboard:copy="sub._raw.url" v-clipboard:success="onCopy">
                             <v-list-item-title>复制</v-list-item-title>
                           </v-list-item>
                           <v-divider></v-divider>
-<<<<<<< HEAD
-=======
                           <v-list-item v-if="subIdx > 0" @click="onMoveSub(subIdx, -1)">
                             <v-list-item-title>上移</v-list-item-title>
                           </v-list-item>
@@ -1512,7 +1234,6 @@ function printHtml(data, curapp = null, curview = 'app') {
                             <v-list-item-title>下移</v-list-item-title>
                           </v-list-item>
                           <v-divider></v-divider>
->>>>>>> master
                           <v-list-item @click="onDelAppSub(sub)">
                             <v-list-item-title>删除</v-list-item-title>
                           </v-list-item>
@@ -1545,11 +1266,7 @@ function printHtml(data, curapp = null, curview = 'app') {
                 </v-card>
               </v-dialog>
             </v-container>
-<<<<<<< HEAD
-            <v-container fluid v-if="ui.curview === 'my'">
-=======
             <v-container fluid v-else-if="ui.curview === 'my'">
->>>>>>> master
               <v-card class="mx-auto">
                 <v-card-title class="headline">
                   {{ box.usercfgs.name ? box.usercfgs.name : '大侠, 留个名字吧!' }}
@@ -1566,10 +1283,7 @@ function printHtml(data, curapp = null, curview = 'app') {
                   </v-chip-group>
                 </v-card-text>
                 <v-card-actions>
-<<<<<<< HEAD
-=======
                   <v-btn text dense color="red" @click="onGoToRevert">抹掉数据</v-btn>
->>>>>>> master
                   <v-spacer></v-spacer>
                   <v-btn @click="ui.impGlobalBakDialog.show = true">导入</v-btn>
                   <v-btn @click="onGlobalBak">备份</v-btn>
@@ -1759,11 +1473,7 @@ function printHtml(data, curapp = null, curview = 'app') {
                 </v-card-text>
               </v-card>
               <v-card flat v-else-if="box.syscfgs.env === 'QuanX'">
-<<<<<<< HEAD
-                <v-card-title>QuanX TF 或 商店 (购买超 90 天)</v-card-title>
-=======
                 <v-card-title>QuanX TF 或 商店 (购买超 30 天)</v-card-title>
->>>>>>> master
                 <v-card-text>
                   <p class="subtitle-1">【远程订阅】</p>
                   <p class="body-1">
@@ -1775,11 +1485,7 @@ function printHtml(data, curapp = null, curview = 'app') {
                   <p class="caption">注意: 不是能只更新订阅链接, 必须长按风车全部更新!</p>
                 </v-card-text>
                 <v-divider></v-divider>
-<<<<<<< HEAD
-                <v-card-title>QuanX 商店 (购买少于 90 天)</v-card-title>
-=======
                 <v-card-title>QuanX 商店 (购买少于 30 天)</v-card-title>
->>>>>>> master
                 <v-card-text>
                   <p class="subtitle-1">【本地更新】</p>
                   <p class="body-2">下载最新脚本 &gt; 重启代理 (主界面右上角的开关)</p>
@@ -1850,12 +1556,9 @@ function printHtml(data, curapp = null, curview = 'app') {
             }
           },
           computed: {
-<<<<<<< HEAD
-=======
             fullscreen: function() {
               return window.navigator.standalone
             },
->>>>>>> master
             darkMode: function() {
               const isSysDark = window.matchMedia('(prefers-color-scheme: dark)').matches
               let isDark = !this.box.usercfgs.isLight
@@ -1883,11 +1586,7 @@ function printHtml(data, curapp = null, curview = 'app') {
               const apps = []
               apps.push(...this.box.sysapps)
               this.box.appsubs.forEach((sub, subIdx) => apps.push(...sub.apps))
-<<<<<<< HEAD
-              apps.sort((a, b) => a.id.localeCompare(b.id))
-=======
               apps.sort((a, b) => a.name.localeCompare(b.name))
->>>>>>> master
               return apps
             },
             appcnt: function () {
@@ -2063,8 +1762,6 @@ function printHtml(data, curapp = null, curview = 'app') {
               this.box.usercfgs.favapps.splice(fromIdx, 1, ...this.box.usercfgs.favapps.splice(toIdx, 1, this.box.usercfgs.favapps[fromIdx]))
               this.onUserCfgsChange()
             },
-<<<<<<< HEAD
-=======
             onMoveSub(subIdx, moveCnt) {
               const fromIdx = subIdx
               const toIdx = subIdx + moveCnt
@@ -2072,7 +1769,6 @@ function printHtml(data, curapp = null, curview = 'app') {
               this.box.usercfgs.appsubs.splice(fromIdx, 1, ...this.box.usercfgs.appsubs.splice(toIdx, 1, this.box.usercfgs.appsubs[fromIdx]))
               this.onUserCfgsChange()
             },
->>>>>>> master
             onFav(app) {
               const appIdx = this.box.sysapps.findIndex((appId) => appId === app.id)
               app.isFav = !app.isFav
@@ -2208,14 +1904,11 @@ function printHtml(data, curapp = null, curview = 'app') {
                 this.onReload()
               })
             },
-<<<<<<< HEAD
-=======
             onRefreshAppSub(sub) {
               axios.post('/api', JSON.stringify({ cmd: 'refreshAppSubs', val: sub._raw.id })).finally(() => {
                 this.onReload()
               })
             },
->>>>>>> master
             onRefreshAppSubs(){
               this.ui.overlay.show = true
               axios.post('/api', JSON.stringify({ cmd: 'refreshAppSubs', val: null })).finally(() => {
@@ -2266,12 +1959,9 @@ function printHtml(data, curapp = null, curview = 'app') {
                 this.onReload()
               })
             },
-<<<<<<< HEAD
-=======
             onGoToRevert() {
               window.open('/revert')
             },
->>>>>>> master
             onGlobalBak() {
               const env = this.box.syscfgs.env
               const version = this.box.syscfgs.version
@@ -2316,11 +2006,6 @@ function printHtml(data, curapp = null, curview = 'app') {
             },
             onGoToRepo(url) {
               window.open(url)
-<<<<<<< HEAD
-            }
-          },
-          mounted: function () {
-=======
             },
             getContributors() {
               const url = 'https://api.github.com/repos/chavyleung/scripts/contributors'
@@ -2349,7 +2034,6 @@ function printHtml(data, curapp = null, curview = 'app') {
           },
           mounted: function () {
             this.getContributors()
->>>>>>> master
             this.$vuetify.theme.dark = this.darkMode
             if (this.ui.curapp) {
               this.goAppSessionView(this.ui.curapp)
@@ -2383,8 +2067,4 @@ function printJson() {
 }
 
 // prettier-ignore
-<<<<<<< HEAD
-function Env(t,s){return new class{constructor(t,s){this.name=t,this.data=null,this.dataFile="box.dat",this.logs=[],this.logSeparator="\n",this.startTime=(new Date).getTime(),Object.assign(this,s),this.log("",`\ud83d\udd14${this.name}, \u5f00\u59cb!`)}isNode(){return"undefined"!=typeof module&&!!module.exports}isQuanX(){return"undefined"!=typeof $task}isSurge(){return"undefined"!=typeof $httpClient}isLoon(){return"undefined"!=typeof $loon}loaddata(){if(!this.isNode())return{};{this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),s=this.path.resolve(process.cwd(),this.dataFile),e=this.fs.existsSync(t),i=!e&&this.fs.existsSync(s);if(!e&&!i)return{};{const i=e?t:s;try{return JSON.parse(this.fs.readFileSync(i))}catch(t){return{}}}}}writedata(){if(this.isNode()){this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),s=this.path.resolve(process.cwd(),this.dataFile),e=this.fs.existsSync(t),i=!e&&this.fs.existsSync(s),o=JSON.stringify(this.data);e?this.fs.writeFileSync(t,o):i?this.fs.writeFileSync(s,o):this.fs.writeFileSync(t,o)}}lodash_get(t,s,e){const i=s.replace(/\[(\d+)\]/g,".$1").split(".");let o=t;for(const t of i)if(o=Object(o)[t],void 0===o)return e;return o}lodash_set(t,s,e){return Object(t)!==t?t:(Array.isArray(s)||(s=s.toString().match(/[^.[\]]+/g)||[]),s.slice(0,-1).reduce((t,e,i)=>Object(t[e])===t[e]?t[e]:t[e]=Math.abs(s[i+1])>>0==+s[i+1]?[]:{},t)[s[s.length-1]]=e,t)}getdata(t){let s=this.getval(t);if(/^@/.test(t)){const[,e,i]=/^@(.*?)\.(.*?)$/.exec(t),o=e?this.getval(e):"";if(o)try{const t=JSON.parse(o);s=t?this.lodash_get(t,i,""):s}catch(t){s=""}}return s}setdata(t,s){let e=!1;if(/^@/.test(s)){const[,i,o]=/^@(.*?)\.(.*?)$/.exec(s),h=this.getval(i),a=i?"null"===h?null:h||"{}":"{}";try{const s=JSON.parse(a);this.lodash_set(s,o,t),e=this.setval(JSON.stringify(s),i),console.log(`${i}: ${JSON.stringify(s)}`)}catch(s){const h={};this.lodash_set(h,o,t),e=this.setval(JSON.stringify(h),i),console.log(`${i}: ${JSON.stringify(h)}`)}}else e=$.setval(t,s);return e}getval(t){return this.isSurge()||this.isLoon()?$persistentStore.read(t):this.isQuanX()?$prefs.valueForKey(t):this.isNode()?(this.data=this.loaddata(),this.data[t]):this.data&&this.data[t]||null}setval(t,s){return this.isSurge()||this.isLoon()?$persistentStore.write(t,s):this.isQuanX()?$prefs.setValueForKey(t,s):this.isNode()?(this.data=this.loaddata(),this.data[s]=t,this.writedata(),!0):this.data&&this.data[s]||null}initGotEnv(t){this.got=this.got?this.got:require("got"),this.cktough=this.cktough?this.cktough:require("tough-cookie"),this.ckjar=this.ckjar?this.ckjar:new this.cktough.CookieJar,t&&(t.headers=t.headers?t.headers:{},void 0===t.headers.Cookie&&void 0===t.cookieJar&&(t.cookieJar=this.ckjar))}get(t,s=(()=>{})){t.headers&&(delete t.headers["Content-Type"],delete t.headers["Content-Length"]),this.isSurge()||this.isLoon()?$httpClient.get(t,(t,e,i)=>{!t&&e&&(e.body=i,e.statusCode=e.status,s(t,e,i))}):this.isQuanX()?$task.fetch(t).then(t=>{const{statusCode:e,statusCode:i,headers:o,body:h}=t;s(null,{status:e,statusCode:i,headers:o,body:h},h)},t=>s(t)):this.isNode()&&(this.initGotEnv(t),this.got(t).on("redirect",(t,s)=>{try{const e=t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();this.ckjar.setCookieSync(e,null),s.cookieJar=this.ckjar}catch(t){this.logErr(t)}}).then(t=>{const{statusCode:e,statusCode:i,headers:o,body:h}=t;s(null,{status:e,statusCode:i,headers:o,body:h},h)},t=>s(t)))}post(t,s=(()=>{})){if(t.body&&t.headers&&!t.headers["Content-Type"]&&(t.headers["Content-Type"]="application/x-www-form-urlencoded"),delete t.headers["Content-Length"],this.isSurge()||this.isLoon())$httpClient.post(t,(t,e,i)=>{!t&&e&&(e.body=i,e.statusCode=e.status),s(t,e,i)});else if(this.isQuanX())t.method="POST",$task.fetch(t).then(t=>{const{statusCode:e,statusCode:i,headers:o,body:h}=t;s(null,{status:e,statusCode:i,headers:o,body:h},h)},t=>s(t));else if(this.isNode()){this.initGotEnv(t);const{url:e,...i}=t;this.got.post(e,i).then(t=>{const{statusCode:e,statusCode:i,headers:o,body:h}=t;s(null,{status:e,statusCode:i,headers:o,body:h},h)},t=>s(t))}}msg(s=t,e="",i="",o){const h=t=>!t||!this.isLoon()&&this.isSurge()?t:"string"==typeof t?this.isLoon()?t:this.isQuanX()?{"open-url":t}:void 0:"object"==typeof t&&(t["open-url"]||t["media-url"])?this.isLoon()?t["open-url"]:this.isQuanX()?t:void 0:void 0;this.isSurge()||this.isLoon()?$notification.post(s,e,i,h(o)):this.isQuanX()&&$notify(s,e,i,h(o)),this.logs.push("","==============\ud83d\udce3\u7cfb\u7edf\u901a\u77e5\ud83d\udce3=============="),this.logs.push(s),e&&this.logs.push(e),i&&this.logs.push(i)}log(...t){t.length>0?this.logs=[...this.logs,...t]:console.log(this.logs.join(this.logSeparator))}logErr(t,s){const e=!this.isSurge()&&!this.isQuanX()&&!this.isLoon();e?$.log("",`\u2757\ufe0f${this.name}, \u9519\u8bef!`,t.stack):$.log("",`\u2757\ufe0f${this.name}, \u9519\u8bef!`,t.message)}wait(t){return new Promise(s=>setTimeout(s,t))}done(t={}){const s=(new Date).getTime(),e=(s-this.startTime)/1e3;this.log("",`\ud83d\udd14${this.name}, \u7ed3\u675f! \ud83d\udd5b ${e} \u79d2`),this.log(),(this.isSurge()||this.isQuanX()||this.isLoon())&&$done(t)}}(t,s)}
-=======
 function Env(t,s){return new class{constructor(t,s){this.name=t,this.data=null,this.dataFile="box.dat",this.logs=[],this.logSeparator="\n",this.startTime=(new Date).getTime(),Object.assign(this,s),this.log("",`\ud83d\udd14${this.name}, \u5f00\u59cb!`)}isNode(){return"undefined"!=typeof module&&!!module.exports}isQuanX(){return"undefined"!=typeof $task}isSurge(){return"undefined"!=typeof $httpClient&&"undefined"==typeof $loon}isLoon(){return"undefined"!=typeof $loon}getScript(t){return new Promise(s=>{$.get({url:t},(t,e,i)=>s(i))})}runScript(t){return new Promise(s=>{const e=this.getdata("@chavy_boxjs_userCfgs.httpapi");console.log(e);const[i,o]=e.split("@"),h={url:`http://${o}/v1/scripting/evaluate`,body:{script_text:t,mock_type:"cron",timeout:5},headers:{"X-Key":i,Accept:"*/*"}};$.post(h,(t,e,i)=>s(i))})}loaddata(){if(!this.isNode())return{};{this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),s=this.path.resolve(process.cwd(),this.dataFile),e=this.fs.existsSync(t),i=!e&&this.fs.existsSync(s);if(!e&&!i)return{};{const i=e?t:s;try{return JSON.parse(this.fs.readFileSync(i))}catch(t){return{}}}}}writedata(){if(this.isNode()){this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),s=this.path.resolve(process.cwd(),this.dataFile),e=this.fs.existsSync(t),i=!e&&this.fs.existsSync(s),o=JSON.stringify(this.data);e?this.fs.writeFileSync(t,o):i?this.fs.writeFileSync(s,o):this.fs.writeFileSync(t,o)}}lodash_get(t,s,e){const i=s.replace(/\[(\d+)\]/g,".$1").split(".");let o=t;for(const t of i)if(o=Object(o)[t],void 0===o)return e;return o}lodash_set(t,s,e){return Object(t)!==t?t:(Array.isArray(s)||(s=s.toString().match(/[^.[\]]+/g)||[]),s.slice(0,-1).reduce((t,e,i)=>Object(t[e])===t[e]?t[e]:t[e]=Math.abs(s[i+1])>>0==+s[i+1]?[]:{},t)[s[s.length-1]]=e,t)}getdata(t){let s=this.getval(t);if(/^@/.test(t)){const[,e,i]=/^@(.*?)\.(.*?)$/.exec(t),o=e?this.getval(e):"";if(o)try{const t=JSON.parse(o);s=t?this.lodash_get(t,i,""):s}catch(t){s=""}}return s}setdata(t,s){let e=!1;if(/^@/.test(s)){const[,i,o]=/^@(.*?)\.(.*?)$/.exec(s),h=this.getval(i),a=i?"null"===h?null:h||"{}":"{}";try{const s=JSON.parse(a);this.lodash_set(s,o,t),e=this.setval(JSON.stringify(s),i),console.log(`${i}: ${JSON.stringify(s)}`)}catch(s){const h={};this.lodash_set(h,o,t),e=this.setval(JSON.stringify(h),i),console.log(`${i}: ${JSON.stringify(h)}`)}}else e=$.setval(t,s);return e}getval(t){return this.isSurge()||this.isLoon()?$persistentStore.read(t):this.isQuanX()?$prefs.valueForKey(t):this.isNode()?(this.data=this.loaddata(),this.data[t]):this.data&&this.data[t]||null}setval(t,s){return this.isSurge()||this.isLoon()?$persistentStore.write(t,s):this.isQuanX()?$prefs.setValueForKey(t,s):this.isNode()?(this.data=this.loaddata(),this.data[s]=t,this.writedata(),!0):this.data&&this.data[s]||null}initGotEnv(t){this.got=this.got?this.got:require("got"),this.cktough=this.cktough?this.cktough:require("tough-cookie"),this.ckjar=this.ckjar?this.ckjar:new this.cktough.CookieJar,t&&(t.headers=t.headers?t.headers:{},void 0===t.headers.Cookie&&void 0===t.cookieJar&&(t.cookieJar=this.ckjar))}get(t,s=(()=>{})){t.headers&&(delete t.headers["Content-Type"],delete t.headers["Content-Length"]),this.isSurge()||this.isLoon()?$httpClient.get(t,(t,e,i)=>{!t&&e&&(e.body=i,e.statusCode=e.status,s(t,e,i))}):this.isQuanX()?$task.fetch(t).then(t=>{const{statusCode:e,statusCode:i,headers:o,body:h}=t;s(null,{status:e,statusCode:i,headers:o,body:h},h)},t=>s(t)):this.isNode()&&(this.initGotEnv(t),this.got(t).on("redirect",(t,s)=>{try{const e=t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();this.ckjar.setCookieSync(e,null),s.cookieJar=this.ckjar}catch(t){this.logErr(t)}}).then(t=>{const{statusCode:e,statusCode:i,headers:o,body:h}=t;s(null,{status:e,statusCode:i,headers:o,body:h},h)},t=>s(t)))}post(t,s=(()=>{})){if(t.body&&t.headers&&!t.headers["Content-Type"]&&(t.headers["Content-Type"]="application/x-www-form-urlencoded"),delete t.headers["Content-Length"],this.isSurge()||this.isLoon())$httpClient.post(t,(t,e,i)=>{!t&&e&&(e.body=i,e.statusCode=e.status),s(t,e,i)});else if(this.isQuanX())t.method="POST",$task.fetch(t).then(t=>{const{statusCode:e,statusCode:i,headers:o,body:h}=t;s(null,{status:e,statusCode:i,headers:o,body:h},h)},t=>s(t));else if(this.isNode()){this.initGotEnv(t);const{url:e,...i}=t;this.got.post(e,i).then(t=>{const{statusCode:e,statusCode:i,headers:o,body:h}=t;s(null,{status:e,statusCode:i,headers:o,body:h},h)},t=>s(t))}}msg(s=t,e="",i="",o){const h=t=>!t||!this.isLoon()&&this.isSurge()?t:"string"==typeof t?this.isLoon()?t:this.isQuanX()?{"open-url":t}:void 0:"object"==typeof t&&(t["open-url"]||t["media-url"])?this.isLoon()?t["open-url"]:this.isQuanX()?t:void 0:void 0;this.isSurge()||this.isLoon()?$notification.post(s,e,i,h(o)):this.isQuanX()&&$notify(s,e,i,h(o)),this.logs.push("","==============\ud83d\udce3\u7cfb\u7edf\u901a\u77e5\ud83d\udce3=============="),this.logs.push(s),e&&this.logs.push(e),i&&this.logs.push(i)}log(...t){t.length>0?this.logs=[...this.logs,...t]:console.log(this.logs.join(this.logSeparator))}logErr(t,s){const e=!this.isSurge()&&!this.isQuanX()&&!this.isLoon();e?$.log("",`\u2757\ufe0f${this.name}, \u9519\u8bef!`,t.stack):$.log("",`\u2757\ufe0f${this.name}, \u9519\u8bef!`,t.message)}wait(t){return new Promise(s=>setTimeout(s,t))}done(t={}){const s=(new Date).getTime(),e=(s-this.startTime)/1e3;this.log("",`\ud83d\udd14${this.name}, \u7ed3\u675f! \ud83d\udd5b ${e} \u79d2`),this.log(),(this.isSurge()||this.isQuanX()||this.isLoon())&&$done(t)}}(t,s)}
->>>>>>> master

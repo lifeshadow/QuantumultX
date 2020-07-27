@@ -1,10 +1,6 @@
 /*
 京东萌宠助手 搬得https://github.com/liuxiaoyucc/jd-helper/blob/master/pet/pet.js
-<<<<<<< HEAD
-更新时间:2020-07-20
-=======
 更新时间:2020-07-22
->>>>>>> master
 // quantumultx
 [task_local]
 #东东萌宠
@@ -14,11 +10,7 @@
 cron "5 6-18/6 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_pet.js,tag=东东萌宠
 互助码shareCode请先手动运行脚本查看打印可看到
 一天只能帮助5个人。多出的助力码无效
-<<<<<<< HEAD
-注：如果使用Node.js, 需自行安装'got'模块. 例: npm install got -g
-=======
 注：如果使用Node.js, 需自行安装'crypto-js,got,http-server,tough-cookie'模块. 例: npm install crypto-js http-server tough-cookie got --save
->>>>>>> master
 */
 const name = '东东萌宠';
 const $ = new Env(name);
@@ -77,13 +69,9 @@ gen.next();
  */
 function* entrance() {
     if (!cookie) {
-<<<<<<< HEAD
-      return $.msg(name, '【提示】请先获取cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', { "open-url": "https://bean.m.jd.com/" });
-=======
       $.msg(name, '【提示】请先获取cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', { "open-url": "https://bean.m.jd.com/" });
       $.done();
       return
->>>>>>> master
     }
     console.log('任务开始');
     yield initPetTown(); //初始化萌宠
@@ -350,13 +338,9 @@ function initPetTown() {
         if (response.code === '0' && response.resultCode === '0' && response.message === 'success') {
             petInfo = response.result;
             if (petInfo.userStatus === 0) {
-<<<<<<< HEAD
-              return $.msg(name, '【提示】此账号萌宠活动未开始，请手动去京东APP开启活动\n入口：我的->游戏与互动->查看更多', '', { "open-url": "openapp.jdmoble://" });
-=======
               $.msg(name, '【提示】此账号萌宠活动未开始，请手动去京东APP开启活动\n入口：我的->游戏与互动->查看更多', '', { "open-url": "openapp.jdmoble://" });
               $.done();
               return
->>>>>>> master
             }
             goodsUrl = response.result.goodsInfo && response.result.goodsInfo.goodsUrl;
             // console.log(`初始化萌宠信息完成: ${JSON.stringify(petInfo)}`);
@@ -364,14 +348,9 @@ function initPetTown() {
           gen.next();
         } else if (response.code === '0' && response.resultCode === '2001'){
             console.log(`初始化萌宠失败:  ${response.message}`);
-<<<<<<< HEAD
-            return $.msg(name, '【提示】京东cookie已失效,请重新登录获取', 'https://bean.m.jd.com/', {"open-url": "https://bean.m.jd.com/"});
-            gen.return();
-=======
             $.setdata('', 'CookieJD');//cookie失效，故清空cookie。
             $.msg(name, '【提示】京东cookie已失效,请重新登录获取', 'https://bean.m.jd.com/', { "open-url": "https://bean.m.jd.com/" });
             $.done();
->>>>>>> master
         }
     })
 
@@ -454,11 +433,7 @@ async function masterHelpInit() {
       }
     } else {
       console.log("助力好友未达到5个")
-<<<<<<< HEAD
-      message += `【额外奖励领取失败】原因：助力好友未达5个\n`;
-=======
       message += `【额外奖励】领取失败，原因：助力好友未达5个\n`;
->>>>>>> master
     }
     if (res.result.masterHelpPeoples && res.result.masterHelpPeoples.length > 0) {
       console.log('帮您助力的好友的名单开始')

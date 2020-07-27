@@ -13,8 +13,8 @@
 h5.ele.me
 
 [Script]
-http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-path=elemGetCookies.js
-cron "0 5 0 * * *" script-path=elemSign.js
+http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/elemGetCookies.js
+cron "0 5 0 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/elemSign.js
 ```
 
 ## 配置 (QuanX)
@@ -25,7 +25,7 @@ h5.ele.me
 
 [rewrite_local]
 
-^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ url script-request-header elemGetCookies.js
+^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ url script-request-header nzw9314/Script/elemGetCookies.js
 
 
 
@@ -53,7 +53,7 @@ h5.ele.me
 
 const delay=3000;
 const cookieName = '饿了么'
-const cookieKey = 'cookie_elem'
+const cookieKey = 'cookie_elem_1'
 const UserId = 'user_id_elem'
 const sy = init()
 var cookieVal = sy.getdata(cookieKey);
@@ -256,7 +256,7 @@ function dosignhis() {
         sy.get(url, (error, response, data) => {
 
           var obj = JSON.parse(data);
-
+sy.log(obj)
           hisresult = obj;
 
 
@@ -282,7 +282,6 @@ function doNotify() {
     }
   }
   ret = ret + '签到3天得3元红包，7天抽10-200元🧧';
-  ret=ret+'\n现已支持BoxJs,https://raw.githubusercontent.com/songyangzz/QuantumultX/master/syzzzf.box.json'
 
   sy.msg('饿了么', '', ret);
 }

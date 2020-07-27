@@ -328,8 +328,4 @@ eval_script.js = type=http-request,pattern=^https?://ios\.prod\.ftl\.netflix\.co
 
 eval_script.js = type=http-response,requires-body=1,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=eval_script.js
 
-<<<<<<< HEAD
 eval_script.js = type=http-response,requires-body=1,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/warmer/.+type=show-ath,script-path=eval_script.js
-=======
-eval_script.js = type=http-response,requires-body=1,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/warmer/.+type=show-ath,script-path=eval_script.js
->>>>>>> master
